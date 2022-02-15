@@ -17,7 +17,7 @@ class Product extends Component {
 
 				</div>
 
-					<button className="btn  btn-block  badge-pill badge-dark" id={`btn-${id}`}>Agregar</button>
+					<button className="btn  btn-block  badge-pill badge-dark" id={`btn-${id}`}>Comprar</button>
 
 			</div>
 		)

@@ -9,7 +9,7 @@ import ProductsList from '../Cart/ProductsCart/ProducstList'
 
 const Cart = (props) => {
   const {
-    shoppingCart, quantityProducts
+    shoppingCart
   } = props
 
 const { products = []} = shoppingCart

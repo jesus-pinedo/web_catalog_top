@@ -20,12 +20,12 @@ class Header extends Component {
 		<header className="row ">
 			<div className="col-9">
 			<img src={`/images/logo.png`} width={60} height={50} alt={'logo'}/>
-					<strong>Walmar Pricing   * Landing*</strong>
+					<strong>Top Quality</strong>
 					
 			</div>
 
 			<div className="col-2">
-			{this.renderQuantityProducts()}
+
 			
 			</div>
 			<div className="col">
