@@ -7,7 +7,7 @@ const initState = {
   loading: true, 
   error:false
 }
-export default (state = initState, action) => {
+const reducer = (state = initState, action) => {
   switch (action.type) {
     case GET_PRODUCTS_SUCCESS:
       return { ...state, products: action.payload, loading: false }
@@ -19,3 +19,5 @@ export default (state = initState, action) => {
       return state
   }
 }
+
+export default reducer

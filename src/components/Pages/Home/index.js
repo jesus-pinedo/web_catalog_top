@@ -1,13 +1,11 @@
 import React, {
-	useEffect, useState
+	useEffect
 } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Api from '../../../api'
 import ProductsList from './Products/ProducstList'
 import { fecthProducts } from '../../../redux/actions'
 import './index.css'
-import axios from 'axios';
 
 
 
@@ -18,7 +16,7 @@ const Home = (props) => {
 		const { fecthProducts } = props
 		if (true)
 		fecthProducts()
-	}, [])
+	})
 
 
 

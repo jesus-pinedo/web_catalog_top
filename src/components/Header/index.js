@@ -1,32 +1,26 @@
-import React, { Fragment, useEffect } from 'react'
+import React from 'react'
 import { useModal } from 'react-modal-hook'
 import PropTypes from 'prop-types'
 import CustomModal from '../CustomModal'
 import { connect } from 'react-redux'
-import {quantityProducts } from '../../selectors/shoppinCart'
 import Cart from '../Pages/Home/Cart'
 import './index.css'
 
 
 
 const Header = (props) => {
-  const {
-     quantityProducts
-  } = props
 
 
   const [showModal, hideModal] = useModal(() => (
     <CustomModal isOpen closeModalAction={hideModal}>
 		 <Cart 
-		    shoppingCart={}
+		    shoppingCart={[]}
 			/>
     </CustomModal>
   ), [])
 
 
-  const debitButtonHandler = () => {
-    showModal()
-  }
+
 
 
   return (
