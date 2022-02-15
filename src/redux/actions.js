@@ -1,57 +1,27 @@
 import Api  from '../api'
-export const GET_SHOPPING_CART_STARTED= 'GET_SHOPPING_CART_STARTED'
-export const GET_SHOPPING_CART_SUCCESS = 'GET_SHOPPING_CART_SUCCESS'
-export const GET_SHOPPING_CART_FAILED = 'GET_SHOPPING_CART_FAILED'
+export const GET_PRODUCTS_STARTED= 'GET_PRODUCTS_STARTED'
+export const GET_PRODUCTS_SUCCESS = 'GET_PRODUCTS_SUCCESS'
+export const GET_PRODUCTS_FAILED = 'GET_PRODUCTS_FAILED'
 
-export const getShoppingCartSuccess = response => ({
-  type: GET_SHOPPING_CART_SUCCESS,
+
+
+export const getProductsSuccess = response => ({
+  type: GET_PRODUCTS_SUCCESS,
   payload: response,
 })
 
-export const getShoppingCartFiled = response => ({
-  type: GET_SHOPPING_CART_FAILED,
+export const getProductsFiled = response => ({
+  type: GET_PRODUCTS_FAILED,
   payload: response,
 })
 
-export const fetchShoppinCart = (shoppingCartId) => async (dispatch) => {
+export const fecthProducts = () => async (dispatch) => {
   const api = new Api()
   try {
-    const response = await api.getShoppingCart(shoppingCartId)
-    dispatch(getShoppingCartSuccess(response.data))
+    const response = await api.getProducts()
+    dispatch(getProductsSuccess(response.data))
   } catch (error) {
-    dispatch(getShoppingCartFiled(error))
+    dispatch(getProductsFiled(error))
   }
 }
 
-
-export const updateShoppinCart = (data) => async (dispatch) => {
-  const api = new Api()
-  try {
-    const response = await api.updateOrder(data)
-    dispatch(getShoppingCartSuccess(response.data))
-  } catch (error) {
-    dispatch(getShoppingCartSuccess(error))
-  }
-}
-
-export const updateShippingDate = (data) => async (dispatch) => {
-  const api = new Api()
-  try {
-    const response = await api.updateShippingDate(data)
-    dispatch(getShoppingCartSuccess(response.data))
-  } catch (error) {
-    dispatch(getShoppingCartSuccess(error))
-  }
-}
-
-
-export const updatePaymentMethod = (data) => async (dispatch) => {
-
-  const api = new Api()
-  try {
-    const response = await api.updatePaymentMethod(data)
-    dispatch(getShoppingCartSuccess(response.data))
-  } catch (error) {
-    dispatch(getShoppingCartSuccess(error))
-  }
-}

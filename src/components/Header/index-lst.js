@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {quantityProducts } from '../../selectors/shoppinCart'
+
 import './index.css';
 import {
   Link
@@ -9,9 +9,8 @@ class Header extends Component {
 	
 
 	renderQuantityProducts = () => {
-		const { quantityProducts } = this.props
 		return (
-  <span className="badge badge-warning">{quantityProducts}</span> 
+  <span className="badge badge-warning">{}</span> 
 		)
 	}
 
@@ -39,9 +38,7 @@ class Header extends Component {
 
 
 const mapStateToProps = state => ({
-	shoppingCart: state.shoppingCartReducer.shoppingCart,
-	isLoading : state.shoppingCartReducer.loading,
-	quantityProducts:quantityProducts(state)
+
 })
 
 export default connect(

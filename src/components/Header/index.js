@@ -11,17 +11,17 @@ import './index.css'
 
 const Header = (props) => {
   const {
-    shoppingCart, quantityProducts
+     quantityProducts
   } = props
 
 
   const [showModal, hideModal] = useModal(() => (
     <CustomModal isOpen closeModalAction={hideModal}>
 		 <Cart 
-		    shoppingCart={shoppingCart}
+		    shoppingCart={}
 			/>
     </CustomModal>
-  ), [shoppingCart])
+  ), [])
 
 
   const debitButtonHandler = () => {
@@ -54,9 +54,7 @@ Header.propTypes = {
 }
 
 const mapStateToProps = state => ({
-	shoppingCart: state.shoppingCartReducer.shoppingCart,
-	isLoading : state.shoppingCartReducer.loading,
-	quantityProducts:quantityProducts(state)
+
 })
 
 
