@@ -3,8 +3,8 @@ import axios from 'axios';
 class Api {
 
 	constructor() {
-		 this.url = 'http://localhost:3001'
-		//this.url = 'https://test-deply-node.herokuapp.com'
+		// this.url = 'http://localhost:3001'
+		this.url = 'https://top-quality-api.herokuapp.com'
 	}
  
 
