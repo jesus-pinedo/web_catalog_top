@@ -1,0 +1,19 @@
+header {
+	padding: 10px;
+	margin-bottom: 10px;
+	margin-left:0 !important;
+	color: white;
+	background-color: #041e42;
+	font-size: 16px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:60px;
+	width:100%;z-index: 99999;
+
+
+}
+
+
+
+
