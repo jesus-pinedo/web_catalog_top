@@ -3,7 +3,7 @@ import { GET_PRODUCTS_STARTED, GET_PRODUCTS_SUCCESS, GET_PRODUCTS_FAILED } from 
 
 
 const initState = {
-  products: {},
+  products: [],
   loading: true, 
   error:false
 }

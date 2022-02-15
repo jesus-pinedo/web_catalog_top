@@ -39,7 +39,7 @@ const Header = (props) => {
 
 			<div className="col">
 			<span className="badge badge-warning"
-			onClick={()=> showModal()} >{quantityProducts}</span> 
+			onClick={()=> showModal()} >{}</span> 
 			
 			</div>
 		</header>

@@ -28,7 +28,7 @@ class Header extends Component {
 			
 			</div>
 			<div className="col">
-			<Link to="/shopping-cart"></Link>
+			<Link to="/test"></Link>
 
 			</div>
 		</header>

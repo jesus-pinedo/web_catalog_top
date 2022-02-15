@@ -12,14 +12,13 @@ import axios from 'axios';
 
 
 const Home = (props) => {
-	const [products, setProducts] = useState(null)
-	const { error, isLoading } = props
+	const { error, isLoading , products} = props
 
 	useEffect(() => {
 		const { fecthProducts } = props
-		if (!products)
+		if (true)
 		fecthProducts()
-	}, [products, props])
+	}, [])
 
 
 
@@ -32,9 +31,6 @@ const Home = (props) => {
 			})
 	}*/
 
-	useEffect(() => {
-		fecthProducts()
-	}, [])
 
 
 	const renderFetchingOrder = () => {
@@ -83,7 +79,7 @@ const Home = (props) => {
 }
 
 const mapStateToProps = state => ({
-	fecthProducts: state.productsReducer.products,
+	products: state.productsReducer.products,
 	isLoading: state.productsReducer.loading,
 	error: state.productsReducer.error,
 })
@@ -100,7 +96,7 @@ Home.defaultProps = {
 }
 
 Home.propTypes = {
-	products: PropTypes.object.isRequired,
+	products: PropTypes.array.isRequired,
 	fecthProducts: PropTypes.func.isRequired
 }
 

@@ -10,7 +10,7 @@ class Api {
 
 
 	getProducts() {
-		return axios.get(`${this.url}//product/list/all`)
+		return axios.get(`${this.url}/product/list/all`)
 	}
 
 }
