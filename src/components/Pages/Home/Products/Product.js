@@ -4,7 +4,7 @@ import CustomCurrencyFormat from './../../../Commons/CustomCurrencyFormat'
 class Product extends Component {
 	render() {
 		const {
-			product: { name, priceInfo, img, description, id, brand } } = this.props
+			product: { name, priceInfo, img, id, brand } } = this.props
 		//	const img = `https://images.lider.cl/wmtcl?source=url[file:/productos/1050669a.jpg]&scale=size[300x300]&&sink`
 		return (
 			<div className="card mb-5 border-0">
