@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Routes as Switch } from 'react-router-dom'
 
 import Header from './components/Header/index-lst'
 import Footer from './components/Footer'
