@@ -14,7 +14,7 @@ const Home = (props) => {
 
 	useEffect(() => {
 		const { fecthProducts } = props
-		if (true)
+		if (products.length===0)
 		fecthProducts()
 	})
 
