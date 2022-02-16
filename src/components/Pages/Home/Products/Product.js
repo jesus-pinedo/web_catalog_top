@@ -8,7 +8,9 @@ class Product extends Component {
 		//	const img = `https://images.lider.cl/wmtcl?source=url[file:/productos/1050669a.jpg]&scale=size[300x300]&&sink`
 		return (
 			<div className="card mb-5 border-0">
-				<img className="img-fluid float-right img-thumbnail border-0" src={img} alt="" ></img>
+				<div className="custom-thumbnail">
+				<img className="img-fluid float-right img-thumbnail border-0 custom-thumbnail" src={img} alt="" ></img>
+				</div>
 				<div className="card-body">
 					<div className="card-title font-weight-bold">{brand}</div>
 					<span className="card-title">{name}</span>
@@ -20,7 +22,7 @@ class Product extends Component {
 
 				</div>
 
-					<button className="btn  btn-block  badge-pill badge-dark" id={`btn-${id}`}>Comprar</button>
+					<button className="btn  btn-block  badge-pill badge-dark custom-button" id={`btn-${id}`}>Comprar</button>
 
 			</div>
 		)

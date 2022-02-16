@@ -1,3 +1,13 @@
 .product-box {
 	padding-right: 0px;
 }
+
+
+.custom-thumbnail {
+
+	height: 200px;
+}
+
+.custom-button {
+	color:#ffc107
+}

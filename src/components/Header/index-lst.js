@@ -18,8 +18,8 @@ class Header extends Component {
 		return (
 		<header className="row ">
 			<div className="col-9">
-			<img src={`/images/logo.png`} width={60} height={50} alt={'logo'}/>
-					<strong>Top Quality</strong>
+			<img src={`/images/full-Logo.png`} width={102} height={77} alt={'logo'}/>
+					<strong></strong>
 					
 			</div>
 

@@ -26,7 +26,7 @@ const Header = (props) => {
   return (
 		<header className="row ">
 			<div className="col-9">
-			<img src={`/images/logo.png`} width={60} height={50} alt={'logo'}/>
+			<img src={`/images/full-Logo.png`} width={60} height={50} alt={'logo'}/>
 					<strong>Walmar Pricing   * Landing*</strong>
 					
 			</div>
