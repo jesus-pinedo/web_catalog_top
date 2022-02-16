@@ -34,7 +34,7 @@ const Home = (props) => {
 	const renderFetchingOrder = () => {
 		return (
 			<section className="contenedor mt-5 pt-4 ">
-				<div className="row justify-content-center">
+				<div className="row mt-5 justify-content-center">
 					<h4>Cargando Productos...</h4>
 				</div>
 			</section>
