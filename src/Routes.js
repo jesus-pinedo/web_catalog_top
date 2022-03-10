@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Routes as Switch } from 'react-router-dom'
+import { HashRouter, Route, Routes as Switch } from 'react-router-dom'
 
 import Header from './components/Header/index-lst'
 import Footer from './components/Footer'
@@ -11,13 +11,13 @@ class Routes extends Component {
 		return (
 			<div className="container">
 				
-				<BrowserRouter>
+				<HashRouter>
 				<Header/>
 					<Switch>
 						<Route exact path="/home" element={<Home />} />
 						<Route exact path="/detail" element= {<Detail/>} />
 					</Switch>
-				</BrowserRouter>
+				</HashRouter>
 				<Footer/>
 			</div>
 		)
@@ -25,3 +25,4 @@ class Routes extends Component {
 }
 
 export default Routes
+

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CustomCurrencyFormat from './../../../Commons/CustomCurrencyFormat'
 
+
 class Detail extends Component {
 	render() {
 
