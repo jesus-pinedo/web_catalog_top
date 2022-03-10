@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 class Product extends Component {
 
 	redirect(){
-		window.location.href = "https://wa.me/573006252521?text=Me%20interesa%20in%20el%20auto%20que%20vendes";
+		window.location.href = "https://wa.me/573006252521?text=Quisiera%20comprar%20este%20producto:%20https://www.topqualitybq.com/images/shoes/10.PNG"";
  }
 
 	render() {
