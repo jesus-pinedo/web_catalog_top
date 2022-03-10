@@ -14,7 +14,7 @@ class Routes extends Component {
 				<HashRouter>
 				<Header/>
 					<Switch>
-						<Route exact path="/home" element={<Home />} />
+						<Route exact path="/" element={<Home />} />
 						<Route exact path="/detail" element= {<Detail/>} />
 					</Switch>
 				</HashRouter>
