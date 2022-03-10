@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CustomCurrencyFormat from './../../../Commons/CustomCurrencyFormat'
+import {Link} from 'react-router-dom'
 
 class Product extends Component {
 	render() {
@@ -21,7 +22,10 @@ class Product extends Component {
 					</p>
 
 				</div>
-
+				<Link to={`/detail/${id}`}>
+				<div>Link</div>
+				</Link>
+     
 					<button className="btn  btn-block  badge-pill badge-dark custom-button" id={`btn-${id}`}>Comprar - {id}</button>
 
 			</div>
