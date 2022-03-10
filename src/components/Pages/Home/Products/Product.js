@@ -3,6 +3,11 @@ import CustomCurrencyFormat from './../../../Commons/CustomCurrencyFormat'
 import {Link} from 'react-router-dom'
 
 class Product extends Component {
+
+	redirect(){
+		window.location.href = "https://wa.me/573006252521?text=Me%20interesa%20in%20el%20auto%20que%20vendes";
+ }
+
 	render() {
 		const {
 			product: { name, priceInfo, img, id, brand } } = this.props
@@ -22,11 +27,14 @@ class Product extends Component {
 					</p>
 
 				</div>
-				<Link to={`/detail/${id}`}>
+				<Link to={``}>
 				<div>Link</div>
 				</Link>
      
-					<button className="btn  btn-block  badge-pill badge-dark custom-button" id={`btn-${id}`}>Comprar - {id}</button>
+					<button 
+					onClick={()=> this.redirect()}
+					className="btn  btn-block  badge-pill badge-dark custom-button" 
+					id={`btn-${id}`}>Comprar - {id}</button>
 
 			</div>
 		)
