@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import CustomCurrencyFormat from './../../../Commons/CustomCurrencyFormat'
-import {Link} from 'react-router-dom'
 
 class Detail extends Component {
 	render() {
