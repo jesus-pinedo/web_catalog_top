@@ -6,19 +6,32 @@ import { connect } from 'react-redux'
 import ProductsList from './Products/ProducstList'
 import { fecthProducts } from '../../../redux/actions'
 import './index.css'
+import {
+  useLocation
+} from "react-router-dom";
 
 
 
 const Home = (props) => {
 	const { error, isLoading , products} = props
+	let query = useQuery();
+	
+const showRef = query.get('showRef')
 
 	useEffect(() => {
+
+
+
 		const { fecthProducts } = props
 		if (products.length===0)
 		fecthProducts()
 	})
 
-
+	function useQuery() {
+		const { search } = useLocation();
+	
+		return React.useMemo(() => new URLSearchParams(search), [search]);
+	}
 
 	/*const fecthProducts = () => {
 		const stagingUrl = 'http://localhost:3001'
@@ -68,7 +81,7 @@ const Home = (props) => {
 				<main className="col-12 col-md-8">
 					<div className="container pt-4">
 						<h5>Productos</h5>
-						<ProductsList products={products} />
+						<ProductsList products={products} showRef={showRef}/>
 					</div>
 				</main>
 			</div>
