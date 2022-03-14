@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
 import CustomCurrencyFormat from './../../../Commons/CustomCurrencyFormat'
-import {Link} from 'react-router-dom'
 
 class Product extends Component {
 
 	redirect(){
 		const {
-			product: { name, priceInfo, img, id, brand } } = this.props
+			product: { name, priceInfo, brand } } = this.props
 			const text = `Hola!!, quisiera comprar el producto:
 			${brand}, ${name}, ${priceInfo.salesPrice}`
 
+			const url = `https://wa.me/573006252521?text=${text}}`
+
+
+		//	const encodedUrl = encodeURI(url);
+
 			//Quisiera%20comprar%20este%20producto:%20https://www.topqualitybq.com/images/shoes/10.PNG
-		window.location.href = `https://wa.me/573006252521?text=${text}}`;
+		window.location.href = url;
  }
 
 	render() {
