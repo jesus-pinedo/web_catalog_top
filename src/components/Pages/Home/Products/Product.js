@@ -6,10 +6,12 @@ class Product extends Component {
 	redirect(){
 		const {
 			product: { name, priceInfo, brand } } = this.props
-			const text = `Hola!!, quisiera comprar el producto:
-			${brand}, ${name}, ${priceInfo.salesPrice}`
+			const salePrice = priceInfo.salePrice
+			const price = new Intl.NumberFormat().format(salePrice)
+			const text = `Hola, quisiera comprar el producto:
+			*${brand} ${name}, $${price}*`
 
-			const url = `https://wa.me/573006252521?text=${text}}`
+			const url = `https://wa.me/573008672763?text=${text}`
 
 
 		//	const encodedUrl = encodeURI(url);
