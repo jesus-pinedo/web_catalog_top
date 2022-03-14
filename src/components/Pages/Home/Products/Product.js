@@ -5,7 +5,13 @@ import {Link} from 'react-router-dom'
 class Product extends Component {
 
 	redirect(){
-		window.location.href = "https://wa.me/573006252521?text=Quisiera%20comprar%20este%20producto:%20https://www.topqualitybq.com/images/shoes/10.PNG";
+		const {
+			product: { name, priceInfo, img, id, brand } } = this.props
+			const text = `Hola!!, quisiera comprar el producto:
+			${brand}, ${name}, ${priceInfo.salesPrice}`
+
+			//Quisiera%20comprar%20este%20producto:%20https://www.topqualitybq.com/images/shoes/10.PNG
+		window.location.href = `https://wa.me/573006252521?text=${text}}`;
  }
 
 	render() {
@@ -27,9 +33,9 @@ class Product extends Component {
 					</p>
 
 				</div>
-				<Link to={``}>
+{/* 				<Link to={``}>
 				<div>Link</div>
-				</Link>
+				</Link> */}
      
 					<button 
 					onClick={()=> this.redirect()}
