@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {
+	useEffect
+} from 'react'
 import { useModal } from 'react-modal-hook'
 import PropTypes from 'prop-types'
+
 import CustomModal from '../CustomModal'
 import { connect } from 'react-redux'
 import Cart from '../Pages/Home/Cart'
+import ReactGA from 'react-ga';
 import './index.css'
 
 
@@ -20,7 +24,9 @@ const Header = (props) => {
   ), [])
 
 
-
+	useEffect(() => {
+		ReactGA.initialize('UA-54486624-2');
+	}, []);
 
 
   return (
