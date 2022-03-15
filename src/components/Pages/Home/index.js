@@ -1,6 +1,7 @@
 import React, {
 	useEffect
 } from 'react'
+import ReactGA from 'react-ga';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import ProductsList from './Products/ProducstList'
@@ -26,6 +27,14 @@ const showRef = query.get('showRef')
 		if (products.length===0)
 		fecthProducts()
 	})
+
+
+	useEffect(() => {
+		alert("")
+		ReactGA.initialize('UA-54486624-2')
+		ReactGA.pageview(window.location.pathname + window.location.search)
+		console.log("react::", ReactGA)
+	}, []);
 
 	function useQuery() {
 		const { search } = useLocation();
