@@ -26,6 +26,7 @@ const Header = (props) => {
 
 	useEffect(() => {
 		ReactGA.initialize('UA-54486624-2');
+		ReactGA.pageview(window.location.pathname + window.location.search);
 	}, []);
 
 
