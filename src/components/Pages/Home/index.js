@@ -30,7 +30,6 @@ const showRef = query.get('showRef')
 
 
 	useEffect(() => {
-		alert("")
 		ReactGA.initialize('UA-54486624-2')
 		ReactGA.pageview(window.location.pathname + window.location.search)
 		console.log("react::", ReactGA)
