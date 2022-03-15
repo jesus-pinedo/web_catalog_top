@@ -20,7 +20,7 @@ class Product extends Component {
 			product: { name, priceInfo, img, id, brand }, showRef} = this.props
 		//	const img = `https://images.lider.cl/wmtcl?source=url[file:/productos/1050669a.jpg]&scale=size[300x300]&&sink`
 		return (
-			<div className="card mb-5 border-0">
+			<div className="cardmb-0 border-0">
 				<div className="custom-thumbnail">
 				<img className="img-fluid float-right img-thumbnail border-0 custom-thumbnail" src={img} alt="" ></img>
 				</div>
