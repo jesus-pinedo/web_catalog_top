@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CustomCurrencyFormat from './../../../Commons/CustomCurrencyFormat'
+import DiscountTag from './DiscountTag'
 
 class Product extends Component {
 
@@ -18,6 +19,8 @@ class Product extends Component {
 	render() {
 		const {
 			product: { name, priceInfo, img, id, brand }, showRef} = this.props
+		const isOnSale = priceInfo.referencePrice - priceInfo.salePrice  >=20000
+		//const isOnSale = true
 		//	const img = `https://images.lider.cl/wmtcl?source=url[file:/productos/1050669a.jpg]&scale=size[300x300]&&sink`
 		return (
 			<div className="cardmb-0 border-0">
@@ -32,6 +35,9 @@ class Product extends Component {
 					<span className="card-title">{name}</span>
 					{/* <p className="card-subtitle muted mb-2">{description}</p> */}
 					<p className="card-text">
+					{ isOnSale && (
+						<DiscountTag discount={'Oferta'} />
+					)}	
 						<strong>
 						<CustomCurrencyFormat value={priceInfo.salePrice}/> </strong>
 					</p>
