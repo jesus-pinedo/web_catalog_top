@@ -12,7 +12,7 @@ class Product extends Component {
 			const text = `Hola, quisiera comprar el producto:
 			*Ref: ${id}, ${brand} ${name}, $${price}*`
 
-			const url = `https://wa.me/573008672763?text=${text}`
+			const url = `https://wa.me/573013401684?text=${text}`
 		window.location.href = url;
  }
 
